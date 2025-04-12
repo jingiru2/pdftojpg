@@ -34,7 +34,7 @@ def convert_pdf():
 
     try:
         # PDF → 이미지로 변환
-        images = convert_from_path(filepath, dpi=200, poppler_path=POPPLER_PATH)
+        images = convert_from_path(filepath, dpi=200)
         image_urls = []
         zip_filename = str(uuid.uuid4()) + '.zip'
         zip_path = os.path.join(app.config['CONVERT_FOLDER'], zip_filename)
